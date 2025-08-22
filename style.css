@@ -1,0 +1,141 @@
+/* ========================
+   Base Styles
+   ======================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+/* ========================
+   Header (Flexbox Example)
+   ======================== */
+.header {
+  display: flex;
+  justify-content: space-between; /* Align logo and nav */
+  align-items: center;
+  background: #222;
+  color: #fff;
+  padding: 1rem;
+}
+
+.logo {
+  font-size: 1.5rem;
+}
+
+.nav ul {
+  display: flex;
+  gap: 1.5rem; /* Flexbox spacing */
+  list-style: none;
+}
+
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.nav a:hover {
+  color: #f4d03f;
+}
+
+/* ========================
+   Grid Layout (Main Area)
+   ======================== */
+.grid-layout {
+  display: grid;
+  grid-template-columns: 250px 1fr; /* Sidebar + content */
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.sidebar {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+.content {
+  background: #fafafa;
+  padding: 1rem;
+  border-radius: 8px;
+}
+
+/* ========================
+   Hero Section
+   ======================== */
+.hero {
+  text-align: center;
+  margin-bottom: 2rem;
+  padding: 1.5rem;
+  background: #eaeaea;
+  border-radius: 8px;
+}
+
+/* ========================
+   Cards Section (Flexbox inside Grid)
+   ======================== */
+.cards {
+  display: flex; /* Flexbox for row of cards */
+  flex-wrap: wrap; /* Wrap for responsiveness */
+  gap: 1rem;
+  justify-content: space-around;
+}
+
+.card {
+  flex: 1 1 200px; /* Grow/shrink with min size */
+  background: #ddd;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 6px;
+}
+
+/* ========================
+   Footer
+   ======================== */
+.footer {
+  text-align: center;
+  padding: 1rem;
+  background: #222;
+  color: #fff;
+  margin-top: 1rem;
+}
+
+/* ========================
+   Media Queries
+   ======================== */
+
+/* Tablet View (<= 900px): Sidebar stacks on top */
+@media (max-width: 900px) {
+  .grid-layout {
+    grid-template-columns: 1fr; /* Single column grid */
+  }
+  
+  .nav ul {
+    gap: 1rem;
+  }
+}
+
+/* Mobile View (<= 600px): Nav vertical, cards 1 column */
+@media (max-width: 600px) {
+  .header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .nav ul {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .cards {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}
