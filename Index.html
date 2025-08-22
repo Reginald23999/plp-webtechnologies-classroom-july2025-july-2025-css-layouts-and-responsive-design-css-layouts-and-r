@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Layout Assignment</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Header with navigation (Flexbox) -->
+  <header class="header">
+    <h1 class="logo">MyWebsite</h1>
+    <nav class="nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Main layout using CSS Grid -->
+  <div class="grid-layout">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <h2>Sidebar</h2>
+      <p>Some helpful links and information go here.</p>
+    </aside>
+
+    <!-- Content area -->
+    <main class="content">
+      <section class="hero">
+        <h2>Welcome to My Responsive Page</h2>
+        <p>This layout demonstrates Flexbox, Grid, and Media Queries in action.</p>
+      </section>
+
+      <!-- Cards (Flexbox inside grid) -->
+      <section class="cards">
+        <article class="card">Card 1: Content block</article>
+        <article class="card">Card 2: Content block</article>
+        <article class="card">Card 3: Content block</article>
+        <article class="card">Card 4: Content block</article>
+      </section>
+    </main>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>&copy; 2025 MyWebsite. All rights reserved.</p>
+  </footer>
+</body>
+</html>
